@@ -33,7 +33,7 @@ public class SecurityConfig {
 //			.headers(Customizer.withDefaults())
 			.authorizeExchange(authz ->
 				authz
-					.pathMatchers("/services/**").authenticated()
+					.pathMatchers("/api/**").authenticated()
 					.pathMatchers("/actuator/**").permitAll()
 					.anyExchange().authenticated())
 			.oauth2Login(withDefaults()) // to redirect to oauth2 login page.;
