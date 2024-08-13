@@ -78,6 +78,8 @@ spring:
           uri: http://localhost:8080
           predicates:
             - Path=/api/emsp/member/**
+          filters:
+            - AddRequestHeader=X-TenantID, public
 
 management:
   endpoints:
